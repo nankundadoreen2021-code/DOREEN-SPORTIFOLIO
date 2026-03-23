@@ -27,6 +27,14 @@ main{background-color: blanchedalmond;}
 .about{padding: 40px;}
 .myabout{margin-bottom: 30px; gap: 40px;  display: grid; grid-template-columns: 1fr 1fr; align-items: center; max-width: fit-content; place-items: center; }
 .myabouttext{background-color: white;height: 300px; padding: 30px;border-radius: 40px; box-shadow: 20px 20px;}
+@media(max-width:768px){
+    .intro{
+        display:grid;
+       grid-template-columns: 1fr;}
+       .list{display: none;}
+       .services{display: grid;grid-template-columns: 1fr;}
+       .myabout{display: grid;grid-template-columns: 1fr;}
+}
 /* .servi{background-color: white; border-radius: 40px; padding:  20px; box-shadow: 20px;} */
 
 
