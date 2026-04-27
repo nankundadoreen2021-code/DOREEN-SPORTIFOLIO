@@ -7,8 +7,8 @@ a{text-decoration: none; color: white;}
 .heading{margin-left: 40px;color: white;font-size: x-large;}
 button{border-radius: 100px; padding: 10px;}
 .myimage{height: 300px; width: 300px; flex: 1;}
-.myimage img{height: 100%; width: auto;}
-.intro{display: flex; margin-top: 40px; gap: 60px; justify-content: space-between; text-align: left; max-width: 2000px; padding: 20px;}
+.myimage img{height: 100%; width: auto; border-radius: 20px;}
+.intro{display: flex; margin-top: 40px; gap: 20px; justify-content: space-between; text-align: left; max-width: 2000px; padding: 10px;}
 /* .intro{display: grid;grid-template-columns: repeat(auto-fit,minmax (300px,2fr)); gap: 20px;max-width: 1100px;} */
 .myintro{flex: 1;}
 .images{height: 300px; width: 300px; flex: 1;}
@@ -19,14 +19,14 @@ body p{font-size: 12pt;}
 .about{padding: 20px;}
 main{background-color: blanchedalmond;}
 .services{display: flex;gap: 60px;margin-bottom: 40px;}
-.image1{height: 300px; width: 250px;}
-.service{background-color: white;border-radius: 40px; padding: 20px; box-shadow: 20px 20px; display: block;margin-left: auto;margin-right: 20px;text-align: center;}
-.image{height:300px ; width: 250px; flex: 1;}
-.image img{height: 300px; width: 250px; border-radius: 40px;}
+.image1{height: 300px; width: 200px;}
+.service{background-color: white;border-radius: 30px; padding: 10px; box-shadow: 10px 10px; display: block;margin-left: 10PX;margin-right: 20px;text-align: center;}
+.image{height:300px ; width: 200px; flex: 1;}
+.image img{height: 400px; width: 400px; border-radius: 20px;}
 /* .about{gap: 30px; flex-wrap: wrap; flex-direction: column; display: flex; justify-content:center ;padding: 40px;} */
 .about{padding: 40px;}
 .myabout{margin-bottom: 30px; gap: 40px;  display: grid; grid-template-columns: 1fr 1fr; align-items: center; max-width: fit-content; place-items: center; }
-.myabouttext{background-color: white;height: 300px; padding: 30px;border-radius: 40px; box-shadow: 20px 20px;}
+.myabouttext{background-color: white;height: 300px; padding: 40px;border-radius: 30px; box-shadow: 20px 20px;}
 @media(max-width:768px){
     .intro{
         display:grid;
