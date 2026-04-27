@@ -1,40 +1,83 @@
-.navbar{background-color: blueviolet; padding: 10px; display: flex;  justify-content: space-between; border-radius: 40px;}
+.navbar{background-color: blueviolet; padding: 10px 20px; display: flex; justify-content: space-between; align-items: center; border-radius: 40px; position: relative;}
 a{text-decoration: none; color: white;}
 .mylistitems{list-style: none;}
-.list{display: flex; gap: 30px;}
+.list{display: flex; gap: 30px; align-items: center;}
 /* .mylogo{00px: auto; height: 150px;} */
 .mybuttons{margin-right: 40px;}
 .heading{margin-left: 40px;color: white;font-size: x-large;}
-button{border-radius: 100px; padding: 10px;}
+button{border-radius: 100px; padding: 10px 20px; border: none; cursor: pointer; background: white; color: blueviolet; font-weight: bold;}
+button:hover{background-color: #ddd;}
+
+/* Mobile menu toggle */
+.menu-toggle{display: none; flex-direction: column; cursor: pointer; gap: 5px;}
+.menu-toggle span{width: 25px; height: 3px; background-color: white; border-radius: 2px;}
+
 .myimage{height: 300px; width: 300px; flex: 1;}
-.myimage img{height: 100%; width: auto; border-radius: 20px;}
-.intro{display: flex; margin-top: 40px; gap: 20px; justify-content: space-between; text-align: left; max-width: 2000px; padding: 10px;}
+.myimage img{height: 100%; width: auto; border-radius: 20px; max-width: 100%;}
+.intro{display: flex; margin-top: 40px; gap: 20px; justify-content: space-between; text-align: left; max-width: 2000px; padding: 10px; align-items: center;}
 /* .intro{display: grid;grid-template-columns: repeat(auto-fit,minmax (300px,2fr)); gap: 20px;max-width: 1100px;} */
 .myintro{flex: 1;}
 .images{height: 300px; width: 300px; flex: 1;}
-.images img{height: 100%; width: auto;}
+.images img{height: 100%; width: auto; max-width: 100%; border-radius: 20px;}
 body h4{font-size: 16pt;}
 body p{font-size: 12pt;}
 .serv{padding: 20px; text-align: center;}
 .about{padding: 20px;}
 main{background-color: blanchedalmond;}
-.services{display: flex;gap: 60px;margin-bottom: 40px;}
+.services{display: flex;gap: 60px;margin-bottom: 40px; justify-content: center; flex-wrap: wrap;}
 .image1{height: 300px; width: 200px;}
-.service{background-color: white;border-radius: 30px; padding: 10px; box-shadow: 10px 10px; display: block;margin-left: 10PX;margin-right: 20px;text-align: center;}
+.image1 img{max-width: 100%; height: auto; border-radius: 20px;}
+.service{background-color: white;border-radius: 30px; padding: 20px; box-shadow: 10px 10px; display: block;margin-left: 10px;margin-right: 20px;text-align: center; flex: 1; min-width: 250px; max-width: 350px;}
 .image{height:300px ; width: 200px; flex: 1;}
-.image img{height: 400px; width: 400px; border-radius: 20px;}
+.image img{height: 300px; width: 300px; border-radius: 20px; max-width: 100%;}
 /* .about{gap: 30px; flex-wrap: wrap; flex-direction: column; display: flex; justify-content:center ;padding: 40px;} */
 .about{padding: 40px;}
 .myabout{margin-bottom: 30px; gap: 40px;  display: grid; grid-template-columns: 1fr 1fr; align-items: center; max-width: fit-content; place-items: center; }
 .myabouttext{background-color: white;height: 300px; padding: 40px;border-radius: 30px; box-shadow: 20px 20px;}
-@media(max-width:768px){
-    .intro{
-        display:grid;
-       grid-template-columns: 1fr;}
-       .list{display: none;}
-       .services{display: grid;grid-template-columns: 1fr;}
-       .myabout{display: grid;grid-template-columns: 1fr;}
+
+/* Responsive Styles */
+@media(max-width: 1024px){
+    .intro{padding: 20px;}
+    .services{gap: 30px;}
+    .service{min-width: 280px;}
 }
-/* .servi{background-color: white; border-radius: 40px; padding:  20px; box-shadow: 20px;} */
+
+@media(max-width: 768px){
+    .navbar{border-radius: 20px; padding: 10px 15px;}
+    .heading{margin-left: 10px; font-size: large;}
+    
+    /* Mobile menu */
+    .menu-toggle{display: flex;}
+    .mylists{position: absolute; top: 100%; left: 0; right: 0; background-color: blueviolet; border-radius: 0 0 20px 20px; padding: 20px; display: none;}
+    .mylists.active{display: block;}
+    .list{flex-direction: column; gap: 15px; text-align: center; padding: 0; margin: 0;}
+    .mybuttons{display: none;}
+    
+    .intro{
+        display: grid;
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    .myimage{height: 250px; width: 250px; margin: 0 auto;}
+    .myimage img{width: 100%; height: auto;}
+    
+    .services{display: grid;grid-template-columns: 1fr; gap: 20px;}
+    .service{max-width: 100%; margin: 10px 0;}
+    .image1{height: auto; width: 100%;}
+    .image1 img{height: 200px; width: 100%; object-fit: cover;}
+    
+    .myabout{display: grid;grid-template-columns: 1fr;}
+    .myabouttext{width: 100%; height: auto; padding: 20px;}
+}
+
+@media(max-width: 480px){
+    .heading{font-size: medium; margin-left: 5px;}
+    .intro{margin-top: 20px; padding: 10px;}
+    .myimage{height: 200px; width: 200px;}
+    body h4{font-size: 14pt;}
+    body p{font-size: 11pt;}
+    .serv{padding: 10px;}
+    .service{padding: 15px; margin: 5px 0;}
+}
 
 

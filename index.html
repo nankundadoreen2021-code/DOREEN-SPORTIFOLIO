@@ -18,7 +18,7 @@
         </div>
 
 
-        <div class="mylists">
+        <div class="mylists" id="navMenu">
             <ul class="list">
                 <li class="mylistitems">
                     <a href="#home">Home</a>
@@ -27,14 +27,19 @@
                     <a href="#services">Services</a>
                 </li>
                  <li class="mylistitems">
-                    <a href="about me">About me</a>
+                    <a href="#about">About me</a>
                 </li>
                 <li class="mylistitems">
-                    <a href="skills & tools">Skills & Tools</a>
+                    <a href="#skills">Skills & Tools</a>
                 </li>
             </ul>
         </div>
 
+        <div class="menu-toggle" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
 
         <div class="mybuttons">
             <button>
@@ -44,7 +49,7 @@
 
     </nav>
     <main>
-    <section class="intro">
+    <section class="intro" id="home">
         <div class="myimage">
             <img src="images/MG.JPG" class="img-fluid"alt="responsive image">
         </div>
@@ -67,7 +72,7 @@
         </div> -->
         </div>
     </section>
-    <section class="serv">
+    <section class="serv" id="services">
         
             <h4>MY SERVICES</h4>
             <p> Comprehensive digital soltions tailored to your business</p>
@@ -100,7 +105,7 @@
            <button>Get in touch</button>
     
     </section>
-    <section class="about">
+    <section class="about" id="about">
             <h4>ABOUT ME</h4>
             <div class="myabout">
                 <div class="myabouttext"> <p>I am a Business Administration student majoring in Accounting at Makerere University Business School.
@@ -113,7 +118,7 @@
         </div>
            
         
-        <div class="skill">
+         <div class="skill" id="skills">
             <h4>SKILLS AND TOOLS</h4>
             <li>
                 <!-- <ul>FRONT END</ul> -->
@@ -132,5 +137,11 @@
     </section>
     </main>
   <footer>Swipe to explore, skills and experience</footer>   
+    <script>
+        function toggleMenu() {
+            var navMenu = document.getElementById("navMenu");
+            navMenu.classList.toggle("active");
+        }
+    </script>
 </body>
 </html>
